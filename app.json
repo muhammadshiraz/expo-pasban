@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Pasban",
+    "slug": "expopasban",
+    "version": "1.0.0",
+    "sdkVersion": "51.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icons/icon.png",
+    "splash": {
+      "image": "./assets/logos/splash-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCHHTTkH9oJY9hrtMGSaouZNCHCDNaeYvM"
+        }
+      },
+      "bundleIdentifier": "com.shiraz996.expopasban"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icons/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCHHTTkH9oJY9hrtMGSaouZNCHCDNaeYvM"
+        }
+      },
+      "package": "com.shiraz996.expopasban"
+    },
+    "web": {
+      "favicon": "./assets/icons/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "94cfaec0-0af5-40de-ac26-712f0b3633e8"
+      }
+    }
+  }
+}

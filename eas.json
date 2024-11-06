@@ -1,0 +1,49 @@
+{
+  "cli": {
+    "version": ">= 12.5.1", // Specifies the minimum CLI version required
+    "appVersionSource": "remote" // Gets version from remote config for consistency
+  },
+  "build": {
+    "development": {
+      "developmentClient": true, // This flag builds a development client, useful for testing with Expo Go or custom dev clients
+      "distribution": "internal", // Internal distribution means you can share the app with teammates/testers (not for app stores)
+      "android": {
+        "buildType": "apk" // Generates an APK for Android development builds
+      },
+      "ios": {
+        "simulator": true // Allows you to run the iOS build on a simulator
+      }
+    },
+    "preview": {
+      "distribution": "internal", // Internal builds can be shared via a link (good for testers or previews)
+      "android": {
+        "buildType": "apk" // Uses APK for Android previews
+      },
+      "ios": {
+        "simulator": true // Simulator build for iOS previews
+      }
+    },
+    "production": {
+      "autoIncrement": true, // Automatically increments the build number
+      "distribution": "store", // Store distribution, prepares for publishing on Play Store / App Store
+      "android": {
+        "buildType": "app-bundle" // AAB format for Play Store (mandatory for Google Play)
+      },
+      "ios": {
+        "simulator": false, // Real device builds for App Store submissions (no simulator)
+        "enterpriseProvisioning": "adhoc" // Use adhoc for enterprise or store distribution
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "mehmood.ayaz@icloud.com", // Your Apple Developer account email
+        "ascAppId": "com.shiraz996.expopasban" // Your App Store Connect app ID (if known)
+      },
+      "android": {
+        "serviceAccountKeyPath": "./path-to-your-service-account.json" // Google Play service account JSON file path
+      }
+    }
+  }
+}
